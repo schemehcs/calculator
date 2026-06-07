@@ -20,11 +20,11 @@ pub struct S {
 }
 
 impl S {
-    fn new(t: T, e: E) -> Self {
+    pub fn new(t: T, e: E) -> Self {
         Self { t, e }
     }
 
-    fn value(&self) -> BigDecimal {
+    pub fn value(&self) -> BigDecimal {
         let lv = self.t.value();
         self.e.value(lv)
     }
@@ -37,11 +37,11 @@ pub struct T {
 }
 
 impl T {
-    fn new(f: F, g: G) -> Self {
+    pub fn new(f: F, g: G) -> Self {
         Self { f, g }
     }
 
-    fn value(&self) -> BigDecimal {
+    pub fn value(&self) -> BigDecimal {
         let lv = self.f.value();
         self.g.value(lv)
     }
